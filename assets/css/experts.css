@@ -1,0 +1,25 @@
+/* Expert profiles from sportsmps, styled for the parents’ guide. */
+.experts .expert-lead,.experts .expert-team article{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-top:16px}
+.experts .expert-heading{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.experts .small-label,.experts .expert-team article>div>span{display:block;font-size:11px;font-weight:700;color:var(--sub);line-height:1.5}
+.experts h3{font-size:24px;color:var(--navy);line-height:1.3;margin:6px 0}
+.experts .expert-heading p,.experts .expert-team p{font-size:13px;color:var(--sub);line-height:1.65}
+.experts .expert-heading img{display:block;width:100px;height:140px;object-fit:cover;object-position:top;border-radius:12px;background:var(--bg);flex:none}
+.experts .expert-credentials{display:flex;flex-wrap:wrap;gap:6px;margin-top:15px}
+.experts .expert-credentials strong{font-size:11px;font-weight:700;background:var(--m-bg);color:var(--navy);padding:5px 9px;border-radius:8px}
+.experts .expert-lead ul{padding-left:18px;margin-top:13px;font-size:13px;color:var(--ink);line-height:1.9}
+.experts .expert-note{font-size:13px;color:var(--sub);border-top:1px solid var(--line);padding-top:12px;margin-top:12px}
+.experts .expert-team{display:grid;gap:12px;margin-top:12px}
+.experts .expert-team article{display:flex;align-items:center;gap:15px;margin-top:0}
+.experts .expert-team img{display:block;width:76px;height:105px;flex:none;object-fit:cover;object-position:top;border-radius:10px;background:var(--bg)}
+.experts .expert-team strong{display:block;color:var(--navy);font-size:13px;margin-bottom:5px}
+.experts .expert-support{background:var(--bg);border-radius:var(--radius);padding:0 18px;margin-top:14px}
+.experts .expert-support summary{cursor:pointer;padding:16px 0;font-size:14px;font-weight:800;color:var(--navy)}
+.experts .expert-support>div{padding-bottom:6px}
+.experts .expert-support p{font-size:12.5px;line-height:1.75;border-top:1px solid var(--line);padding:13px 0}
+.experts .expert-support-name{display:block;font-size:17px;color:var(--navy)}
+.experts .expert-support-role{display:block;font-size:11px;font-weight:700;color:var(--sub);margin:2px 0 5px}
+.experts .expert-contact{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;margin-top:16px;padding:15px 17px;border:0;border-radius:14px;background:var(--navy2);color:#fff;font-size:14px;font-weight:700;line-height:1.5;font-family:inherit;cursor:pointer}
+.experts .expert-contact:focus-visible,.experts summary:focus-visible{outline:3px solid var(--m-blue);outline-offset:3px}
+@media(max-width:359px){.experts .expert-heading img{width:80px;height:120px}.experts .expert-lead,.experts .expert-team article{padding:14px}.experts .expert-team img{width:64px;height:96px}.experts .expert-team article{gap:12px}}
+@media print{.experts .expert-contact{display:none}.experts article{break-inside:avoid}}

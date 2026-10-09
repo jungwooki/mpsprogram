@@ -255,8 +255,10 @@
   }
 </style>
 <link rel="stylesheet" href="assets/css/quick-actions.css">
+<link rel="stylesheet" href="assets/css/experts.css">
 <script src="assets/js/reports.js" defer></script>
 <script src="assets/js/dialogs.js" defer></script>
+<script src="assets/js/experts.js" defer></script>
 </head>
 <body>
 
@@ -283,6 +285,7 @@
   <a href="#mental"   data-t="mental"><i class="ic lm">M</i><b>멘탈</b><span>마음에도 체력이 있습니다</span></a>
   <a href="#physical" data-t="physical"><i class="ic lp">P</i><b>피지컬</b><span>아프기 전에 신호를 잡습니다</span></a>
   <a href="#stage"    data-t="stage"><i class="ic ls">S</i><b>성장단계</b><span>너의 진짜 나이는?</span></a>
+  <a href="#experts" data-t="experts"><i class="ic lm">◎</i><b>함께하는 전문가</b><span>아이의 성장을 함께 읽습니다</span></a>
   <a href="#summary"  data-t="summary"><i class="ic" style="background:#E9F7F0; color:#2FA36B;">★</i><b>한 장 요약</b><span>꼭 드리고 싶은 말</span></a>
 </nav>
 
@@ -791,6 +794,25 @@
   </div>
 </section>
 
+<!-- ========== EXPERTS ========== -->
+<section class="experts" id="experts" data-title="함께하는 전문가" aria-labelledby="title-experts">
+<div class="kicker">OUR EXPERTS · 함께하는 전문가</div>
+<h2 id="title-experts">아이의 성장을 함께 읽는 전문가</h2>
+<p class="lead">스포츠과학 × 스포츠한의학.<br>대표팀, 프로, 프로산하 선수로의 성장 경험을 MPS에 담았습니다.</p>
+<article class="expert-lead">
+<div class="expert-heading"><div><span class="small-label">CEO · 대표 / 스포츠한의학</span><h3>이정욱</h3><p>주니어골든에이지 대표<br>해온한의원 본원 대표 한의사</p></div><img src="assets/images/team/lee.png" alt="이정욱 대표" loading="lazy" width="140" height="170"></div>
+<div class="expert-credentials"><strong>FIFA 축구의학 코스 수료</strong><strong>스포츠한의학회 공인 팀닥터</strong></div>
+<ul><li>스포츠한의학 20년의 임상·교육 경험</li><li>동국대·가천대 한의학과 겸임교수</li><li>서울 대동초 축구부 팀닥터</li><li>스포츠 심리상담사 1급</li></ul>
+<p class="expert-note">축구선수의 학부모이자 팀닥터로,<br>아이의 현장과 부모님의 고민을 함께 이해합니다.</p>
+</article>
+<div class="expert-team">
+<article><img src="assets/images/team/kim.png" alt="김학인 스포츠박사" loading="lazy" width="90" height="110"><div><span>CMO · 현장 / 스포츠</span><h3>김학인</h3><strong>현장 출신 스포츠박사</strong><p>축구행정·스포츠마케팅 20년<br>대한축구협회·대한체육회 스포츠개혁위원</p></div></article>
+<article><img src="assets/images/team/hwang.png" alt="황원 심리상담사" loading="lazy" width="90" height="110"><div><span>CX · 현장 / 상담</span><h3>황원</h3><strong>프로 출신 심리상담사</strong><p>성남FC 축구선수 출신<br>현장 운영 및 고객 경험 담당</p></div></article>
+</div>
+<details class="expert-support"><summary>연구·기술 전문가도 함께합니다</summary><div><p><strong class="expert-support-name">양우영</strong><span class="expert-support-role">COO · 운영 / 상담</span>중등정교사 출신 총괄 매니저<br>교육·상담 총괄 · 평가 현장 운영</p><p><strong class="expert-support-name">정지은</strong><span class="expert-support-role">성장 / 멘탈 R&amp;D</span>소아과 교수 · 심리상담사 · 한의학박사·전문의<br>성장·멘탈 평가 프로토콜 연구개발</p><p><strong class="expert-support-name">한유경 · 민은경</strong><span class="expert-support-role">피지컬 R&amp;D</span>RMSK 초음파 · 한방내과 전문의·팀닥터<br>피지컬 부상위험도 프로토콜 연구개발 협업</p><p><strong class="expert-support-name">이준우</strong><span class="expert-support-role">CTO</span>AI 웹솔루션 개발 총괄</p><p><strong class="expert-support-name">박세환</strong><span class="expert-support-role">UX/UI</span>웹·모바일 UX/UI 기획 5년<br>측정 앱·리포트 설계</p></div></details>
+<button class="expert-contact" id="expert-book" type="button" aria-haspopup="dialog" aria-controls="booking-dialog">우리 아이의 성장, 전문가와 상담하기 <span aria-hidden="true">↗</span></button>
+</section>
+
 <!-- ========== SUMMARY ========== -->
 <section id="summary">
   <div class="kicker">SUMMARY · 한 장 요약</div>
@@ -859,9 +881,9 @@
       top   = document.getElementById('toTop'),
       bar   = document.getElementById('progbar'),
       links = menu.querySelectorAll('a'),
-      ids   = ['home','why','overview','mental','physical','stage','summary'],
+      ids   = ['home','why','overview','mental','physical','stage','experts','summary'],
       names = {home:'첫화면', why:'왜 필요한가요', overview:'MPS 한눈에',
-               mental:'멘탈', physical:'피지컬', stage:'성장단계', summary:'한 장 요약'},
+               mental:'멘탈', physical:'피지컬', stage:'성장단계', experts:'전문가', summary:'한 장 요약'},
       open  = false;
 
   function setOpen(v){
